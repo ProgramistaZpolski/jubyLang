@@ -1,2 +1,2 @@
 # tokenStealerLang
-język programowania podobny do ruby. Ale tylko w syntaxie. W komendach nie.
+cały kod znajdziesz tutaj https://github.com/ruby/ruby elo
