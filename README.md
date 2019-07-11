@@ -10,3 +10,7 @@ Przykład
 badosz Hello World!
 badosz 22
 ```
+Odpowiednik w Ruby
+```
+puts "tekst"
+```
