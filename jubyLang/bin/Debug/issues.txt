@@ -1,0 +1,69 @@
+VSCode clearing files
+#77124 opened 22 minutes ago by dudeking 
+How to Deployment containers ??
+#77122 opened 37 minutes ago by nvthuong1996 
+@jrieken
+Python debugging fails to unpack env variables in launch args new release
+#77119 opened 1 hour ago by DonJayamanne 
+ 1
+Is is able to add a shortcut to toggle the items in the activity bar?
+#77118 opened 2 hours ago by mejliu 
+Comment actions are poorly rendered if only title is provided for the command bug comments
+#77116 opened 2 hours ago by RMacfarlane 
+@RMacfarlane
+Detect updates in dependencies extensions
+#77115 opened 2 hours ago by michaeljota 
+CPU 100%
+#77114 opened 3 hours ago by wulide 
+ 1
+Terminal starts with command prompt and curser hidden. new release
+#77113 opened 3 hours ago by rjones020 
+Find references: show number of children similar to search results feature-request references-viewlet
+#77112 opened 3 hours ago by bpasero 
+@jrieken
+Should debug integrated terminal support pass the env directly to createTerminal?
+#77111 opened 3 hours ago by Tyriar 
+@weinand
+Debug integrated terminal support doesn't get default terminal bug debug
+#77110 opened 3 hours ago by Tyriar  July 2019
+@weinand
+Git Fetch doesn't present authentication prompt new release
+#77109 opened 3 hours ago by satori-stan 
+Invalid highlighting for multiple post parameters in c++ pure virtual method
+#77107 opened 3 hours ago by tbhartman 
+@alexr00  1
+Reveal Active File in Side Bar command is unreliable file-explorer needs more info
+#77106 opened 3 hours ago by mgabeler-lee-6rs 
+@isidorn  1
+Toggle line comment functionality editor-contrib
+#77104 opened 5 hours ago by credencie1 
+@rebornix
+VS Code Server for WSL closed unexpectedly
+#77103 opened 5 hours ago by markfaine 
+@aeschli  1
+Suggestion: improve TypeScript loading indicators typescript
+#77101 opened 5 hours ago by OliverJAsh 
+@mjbvz  2
+Extension host terminated unexpectedly. new release
+#77099 opened 5 hours ago by johnschult 
+@alexandrudima
+Regression - tasks.json - dependsOn starts only first and last task if presentation group is defined bug candidate new release tasks
+#77098 opened 5 hours ago by shruda  July 2019
+@alexr00  2
+PowerShell Pop-up Opens in Background bug integrated-terminal windows
+#77097 opened 6 hours ago by NickDorak  Backlog
+@Tyriar
+Debounce outline request based on average reply duration feature-request outline
+#77096 opened 6 hours ago by jrieken 
+@jrieken
+No folder: simple file dilaog should show home directory as default bug simple-file-dialog
+#77094 opened 7 hours ago by isidorn  July 2019
+@alexr00  1
+View state: persist when it changes debt workbench-state
+#77088 opened 7 hours ago by bpasero 
+@sandy081
+Smart selection not working properly needs more info smart-select
+#77087 opened 7 hours ago by DwiPriyatmoko 
+@jrieken  1
+Font "jumps" when cursor hits the line new release
+#77086 opened 8 hours ago by abyss7 
