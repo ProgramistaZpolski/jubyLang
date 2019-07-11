@@ -1,2 +1,4 @@
 # tokenStealerLang
-cały kod znajdziesz tutaj https://github.com/ruby/ruby elo
+haha nie ma ty kurwo jebana
+
+caly kod znajdziesz [tutaj](https://github.com/ruby/ruby) :)
