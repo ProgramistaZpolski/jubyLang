@@ -14,3 +14,26 @@ Odpowiednik w Ruby
 ```
 puts "tekst"
 ```
+
+```
+java = [nowa wartość]
+```
+Ustawia zmienną java na nową wartość
+Przykład
+```
+java = 10
+java = smieci
+```
+Odpowiednik w Ruby
+```
+java = [wartość]
+```
+
+```
+java
+```
+wypisuje zmienną java
+Odpowiednik w Ruby
+```
+puts java
+```
