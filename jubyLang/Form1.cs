@@ -29,6 +29,7 @@ namespace jubyLang
             bool DoRepeat = true;
             string spr;
             int i = 0;
+            string java = "SuperNPC";
             deguug deguug = new deguug();
             deguug.Show();
             while (DoRepeat == true)
@@ -40,6 +41,14 @@ namespace jubyLang
                     spr = specificLine.Remove(0,7);
                     deguug.richTextBox1.Text += spr + "\n";
                     tempLater += "Console.WriteLine(" + '"' + spr + '"' + ");";
+                }
+                if (specificLine.Contains("java ="))
+                {
+                    java = specificLine.Remove(0, 6);
+                }
+                if (specificLine == "java")
+                {
+                    deguug.richTextBox1.Text += java + "\n";
                 }
                 else if (specificLine == "nie banuj")
                 {
@@ -55,9 +64,9 @@ namespace jubyLang
                     DoRepeat = false;
                     tempLater += File.ReadAllText("templateend.txt");
                     CompileSCS();
-                    output uot = new output();
-                    uot.Show();
-                    uot.richTextBox1.Text = tempLater;
+                    //output uot = new output();
+                    //uot.Show();
+                    //uot.richTextBox1.Text = tempLater;
                 }
             }
         }
