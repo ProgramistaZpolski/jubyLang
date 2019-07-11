@@ -1,2 +1,4 @@
 # tokenStealerLang
-język programowania podobny do ruby. Ale tylko w syntaxie. W komendach nie.
+haha nie ma ty kurwo jebana
+
+caly kod znajdziesz [tutaj](https://github.com/ruby/ruby) :)
