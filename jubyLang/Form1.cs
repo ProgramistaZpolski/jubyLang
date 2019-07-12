@@ -15,7 +15,6 @@ namespace jubyLang
 {
     public partial class Form1 : Form
     {
-        string tempLater = File.ReadAllText("template.txt");
         public Form1()
         {
             InitializeComponent();
@@ -40,7 +39,6 @@ namespace jubyLang
                 {
                     spr = specificLine.Remove(0,7);
                     deguug.richTextBox1.Text += spr + "\n";
-                    tempLater += "Console.WriteLine(" + '"' + spr + '"' + ");";
                 }
                 if (specificLine.Contains("java ="))
                 {
@@ -62,51 +60,110 @@ namespace jubyLang
                 if (i == richTextBox1.Text.Split('\n').Length)
                 {
                     DoRepeat = false;
-                    tempLater += File.ReadAllText("templateend.txt");
-                    CompileSCS();
-                    //output uot = new output();
-                    //uot.Show();
-                    //uot.richTextBox1.Text = tempLater;
                 }
             }
         }
-        public void CompileSCS()
+        public static string StringToBinary(string data)
         {
+            StringBuilder sb = new StringBuilder();
 
-            CSharpCodeProvider codeProvider = new CSharpCodeProvider();
-            ICodeCompiler icc = codeProvider.CreateCompiler();
-            string Output = "smiec.exe";
-            deguug debyge = new deguug();
-            System.CodeDom.Compiler.CompilerParameters parameters = new CompilerParameters
+            foreach (char c in data.ToCharArray())
             {
-                GenerateExecutable = true,
-                OutputAssembly = Output
-            };
-            CompilerResults results = icc.CompileAssemblyFromSource(parameters, tempLater);
-            if (results.Errors.Count > 0)
-            {
-                debyge.richTextBox1.ForeColor = Color.Red;
-                foreach (CompilerError CompErr in results.Errors)
-                {
-                    debyge.richTextBox1.Text = debyge.richTextBox1.Text +
-                                "Line number " + CompErr.Line +
-                                ", Error Number: " + CompErr.ErrorNumber +
-                                ", '" + CompErr.ErrorText + ";" +
-                                Environment.NewLine + Environment.NewLine;
-                }
+                sb.Append(Convert.ToString(c, 2).PadLeft(8, '0'));
             }
-            else
-            {
-                //Successful Compile
-                debyge.richTextBox1.ForeColor = Color.Blue;
-                debyge.richTextBox1.Text = "Success!";
-
-            }
+            return sb.ToString();
         }
-
         private void Button2_Click(object sender, EventArgs e)
         {
-            CompileSCS();
+            saveFileDialog1.ShowDialog();
+            string coodete = richTextBox1.Text;
+            var lines = coodete.Split('\n');
+            var specificLine = lines[0];
+            bool DoRepeat = true;
+            string spr;
+            int i = 0;
+            string java = "SuperNPC";
+            string fina = "";
+            while (DoRepeat == true)
+            {
+
+                specificLine = lines[i];
+                if (specificLine.Contains("badosz"))
+                {
+                    spr = specificLine.Remove(0, 7);
+                    fina += "badosz " + spr + "\n";
+                }
+                if (specificLine.Contains("java ="))
+                {
+                    java = specificLine.Remove(0, 6);
+                    fina += specificLine;
+                }
+                if (specificLine == "java")
+                {
+                    fina += java + "\n";
+                }
+                i++;
+                if (i == richTextBox1.Text.Split('\n').Length)
+                {
+                    DoRepeat = false;
+                }
+            }
+            MessageBox.Show(StringToBinary(fina));
+            File.WriteAllText(saveFileDialog1.FileName + ".jlexe", StringToBinary(fina));
+        }
+            public static string BinaryToString(string data)
+            {
+                List<Byte> byteList = new List<Byte>();
+
+                for (int i = 0; i < data.Length; i += 8)
+                {
+                    byteList.Add(Convert.ToByte(data.Substring(i, 8), 2));
+                }
+                return Encoding.ASCII.GetString(byteList.ToArray());
+            }
+        private void Button3_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.ShowDialog();
+            string coodete = BinaryToString(File.ReadAllText(openFileDialog1.FileName));
+            var lines = coodete.Split('\n');
+            var specificLine = lines[0];
+            bool DoRepeat = true;
+            string spr;
+            int i = 0;
+            string java = "SuperNPC";
+            deguug deguug = new deguug();
+            deguug.Show();
+            while (DoRepeat == true)
+            {
+
+                specificLine = lines[i];
+                if (specificLine.Contains("badosz"))
+                {
+                    spr = specificLine.Remove(0, 7);
+                    deguug.richTextBox1.Text += spr + "\n";
+                }
+                if (specificLine.Contains("java ="))
+                {
+                    java = specificLine.Remove(0, 6);
+                }
+                if (specificLine == "java")
+                {
+                    deguug.richTextBox1.Text += java + "\n";
+                }
+                else if (specificLine == "nie banuj")
+                {
+                    deguug.richTextBox1.Text += "nie banuj pls" + "\n";
+                }
+                else if (specificLine == "microsoft/vscode")
+                {
+                    deguug.richTextBox1.Text += File.ReadAllText("issues.txt") + "\n";
+                }
+                i++;
+                if (i == richTextBox1.Text.Split('\n').Length)
+                {
+                    DoRepeat = false;
+                }
+            }
         }
     }
 }
