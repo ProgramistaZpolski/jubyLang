@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using OpenTK;
 
 namespace jubyLang
 {
@@ -40,6 +41,31 @@ namespace jubyLang
                     spr = specificLine.Remove(0,7);
                     deguug.richTextBox1.Text += spr + "\n";
                 }
+                if (specificLine.Contains("GameWindow"))
+                {
+                    spr = specificLine.Remove(0, 11);
+                    //wynik 500 500
+                    string spr2 = spr.Remove(0, 3);
+                    string spr3 = spr.Remove(4,3);
+                    deguug.richTextBox1.Text += spr2 + " " + spr3 + "\n";
+                    
+                    GameWindow gameWindow = new GameWindow(Convert.ToInt32(spr2), Convert.ToInt32(spr3));
+                    GLGameSupport gm = new GLGameSupport(gameWindow);
+
+                }
+                /*if (specificLine.Contains("SetCred"))
+                {
+                    spr = specificLine.Remove(0, 7);
+                    string spr2 = spr.Remove(0, 3);
+                    string spr3 = spr.Remove(4, 3);
+                    string spr2 = spr.Remove(0, 3);
+                    string spr3 = spr.Remove(4, 3);
+                    deguug.richTextBox1.Text += spr2 + " " + spr3 + "\n";
+
+                    GLGameSupport gml;
+                    gml.SetCred();
+
+                }*/
                 if (specificLine.Contains("java ="))
                 {
                     java = specificLine.Remove(0, 6);
@@ -164,6 +190,12 @@ namespace jubyLang
                     DoRepeat = false;
                 }
             }
+        }
+
+        private void Button4_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.ShowDialog();
+            richTextBox1.Text = BinaryToString(File.ReadAllText(openFileDialog1.FileName));
         }
     }
 }
