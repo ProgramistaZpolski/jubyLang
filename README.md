@@ -1,6 +1,6 @@
 # jubyLang
 język programowania podobny do ruby. Ale tylko w syntaxie. W komendach nie.
-### Komendy
+### Komendy / Wersje OpenGL niżej
 ```
 badosz [tekst]
 ```
@@ -36,4 +36,14 @@ wypisuje zmienną java
 Odpowiednik w Ruby
 ```
 puts java
+```
+### Komendy do OpenGL
+```
+GameWindow [x] [y]
+```
+Tworzy nowe okno OpenGL o podanej szerokości i wysokości
+Przykłady
+```
+GameWindow 250 250
+GameWindow 1270 720
 ```
