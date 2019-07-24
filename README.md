@@ -1,6 +1,7 @@
 # jubyLang
 język programowania podobny do ruby. Ale tylko w syntaxie. W komendach nie.
 ### Komendy / Wersje OpenGL niżej
+### UWAGA Komendy w readme nie są rozwijane proszę zajrzeć do wiki
 ```
 badosz [tekst]
 ```
